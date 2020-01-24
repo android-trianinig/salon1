@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Salon</string>
+
+    //logIn Activity
+    <string name="app_logo">Application Logo</string>
+    <string name="log_in_user_phone_hint">Phone Number</string>
+    <string name="log_in_user_password">Password</string>
+    <string name="log_in_button">Log in</string>
+    <string name="sign_in_button">Sign in</string>
+    <string name="skip_log_in_button">Skip Log in</string>
+</resources>

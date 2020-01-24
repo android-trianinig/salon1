@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".LogInActivity">
+
+        <ImageView
+            android:id="@+id/app_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/app_logo"
+            android:scaleType="centerCrop"
+            android:src="@drawable/salon_splahscreen_draw" />
+
+        <LinearLayout
+            android:id="@+id/log_in_edit_fields"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/app_logo"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/log_in_user_phone"
+                style="@style/log_in_edit_fields_style"
+                android:drawableStart="@drawable/telephone_auricular_with_cable"
+                android:drawableLeft="@drawable/telephone_auricular_with_cable"
+                android:drawablePadding="8dp"
+                android:hint="@string/log_in_user_phone_hint"
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/log_in_password"
+                style="@style/log_in_edit_fields_style"
+                android:drawableStart="@drawable/lock"
+                android:drawableLeft="@drawable/lock"
+                android:drawablePadding="8dp"
+                android:hint="@string/log_in_user_password"
+                android:inputType="textPassword" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/log_in_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/log_in_edit_fields"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/log_in_btn"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/login_button_rounded_corners"
+                android:text="@string/log_in_button"
+                android:onClick="onLogInBtnClicked"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+
+            <Button
+                android:id="@+id/sign_in_btn"
+                style="@style/log_in_activity_buttons"
+                android:background="@drawable/signin_button_rounded_corners"
+                android:text="@string/sign_in_button" />
+
+
+            <Button
+                android:id="@+id/skip_log_in_btn"
+                style="@style/log_in_activity_buttons"
+                android:background="@drawable/skip_button_rounded_corners"
+                android:text="@string/skip_log_in_button"
+
+                />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
