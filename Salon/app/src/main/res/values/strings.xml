@@ -6,6 +6,26 @@
     <string name="log_in_user_phone_hint">Phone Number</string>
     <string name="log_in_user_password">Password</string>
     <string name="log_in_button">Log in</string>
-    <string name="sign_in_button">Sign in</string>
+    <string name="not_singed_up">New User?</string>
     <string name="skip_log_in_button">Skip Log in</string>
+
+
+    //sign up dialog
+    <string name="client_or_provider">Are you a Client or Service Provider?</string>
+
+    //sign up *clients* and *service providers* layout
+    <string name="add_user_photo">Add new user photo</string>
+    <string name="click_to_add_new_photo">Add Photo</string>
+    <string name="sign_up_user_name_hint">User Name</string>
+    <string name="sign_up_user_phone">Phone Number</string>
+    <string name="sign_up_user_email">Email</string>
+    <string name="sign_up_user_city">City</string>
+    <string name="sign_up_user_location">Location</string>
+    <string name="sign_up_user_password">Password</string>
+    <string name="new_user_sign_up">Sign Up</string>
+    <string name="title_activity_select_location">Map</string>
+
+    //map activity
+    <string name="drag_to_your_location">Drag the red marker to your location then click confirm</string>
+
 </resources>

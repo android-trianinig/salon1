@@ -1,33 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@android:color/white"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
 
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".LogInActivity">
+        tools:context=".ui.LogInActivity">
 
         <ImageView
             android:id="@+id/app_logo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:adjustViewBounds="true"
             android:contentDescription="@string/app_logo"
             android:scaleType="centerCrop"
-            android:src="@drawable/salon_splahscreen_draw" />
+            android:src="@drawable/salon_splahscreen_draw"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
             android:id="@+id/log_in_edit_fields"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/app_logo"
             android:layout_centerHorizontal="true"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/app_logo">
 
             <EditText
                 android:id="@+id/log_in_user_phone"
@@ -52,9 +57,10 @@
             android:id="@+id/log_in_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/log_in_edit_fields"
             android:layout_centerHorizontal="true"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/log_in_edit_fields">
 
             <Button
                 android:id="@+id/log_in_btn"
@@ -64,29 +70,27 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/login_button_rounded_corners"
-                android:text="@string/log_in_button"
                 android:onClick="onLogInBtnClicked"
+                android:text="@string/log_in_button"
                 android:textAllCaps="false"
                 android:textColor="@android:color/white"
                 android:textSize="16sp" />
 
 
             <Button
-                android:id="@+id/sign_in_btn"
+                android:id="@+id/sign_up_btn"
                 style="@style/log_in_activity_buttons"
-                android:background="@drawable/signin_button_rounded_corners"
-                android:text="@string/sign_in_button" />
+                android:background="@drawable/sign_up_button_rounded_corners"
+                android:onClick="onSingUpClicked"
+                android:text="@string/not_singed_up" />
 
 
             <Button
                 android:id="@+id/skip_log_in_btn"
                 style="@style/log_in_activity_buttons"
                 android:background="@drawable/skip_button_rounded_corners"
-                android:text="@string/skip_log_in_button"
-
-                />
-
+                android:text="@string/skip_log_in_button" />
 
         </LinearLayout>
-    </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
