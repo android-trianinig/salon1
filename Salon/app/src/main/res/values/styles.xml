@@ -23,7 +23,7 @@
 
 
     <style name="log_in_edit_fields_style">
-        <item name="android:layout_width">300dp</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">50dp</item>
         <item name="android:layout_marginBottom">10dp</item>
         <item name="android:paddingLeft">8dp</item>
