@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sign_in_options">
+        <item>I\'m a Client</item>
+        <item>I\'m a Service Provider</item>
+    </string-array>
+    <string-array name="cities_names_ar">
+        <item>الدمام</item>
+        <item>الرياض</item>
+        <item>مكة المكرمة</item>
+        <item>المدينة المنورة</item>
+    </string-array>
+    <string-array name="cities_names_en">
+        <item>Dammam</item>
+        <item>Riyadh</item>
+        <item>Mecca</item>
+        <item>Medina</item>
+    </string-array>
+    <string-array name="cities_LatLong">
+        <item>26.43442, 50.10326</item>
+        <item>24.68773, 46.72185</item>
+        <item>21.42664, 39.82563</item>
+        <item>24.46861, 39.61417</item>
+    </string-array>
+</resources>

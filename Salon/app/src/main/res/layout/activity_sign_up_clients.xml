@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.SignUpActivity">
+
+
+        <RelativeLayout
+            android:id="@+id/add_user_image_layout"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/sign_up_user_image_rounded_corners"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/user_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/add_user_photo"
+                android:scaleType="center"
+                android:src="@drawable/ic_camera" />
+
+            <TextView
+                android:id="@+id/new_photo_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dp"
+                android:text="@string/click_to_add_new_photo"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/sign_in_edit_fields"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_user_image_layout"
+            app:layout_constraintVertical_bias="0.13">
+
+            <EditText
+                android:id="@+id/sign_up_client_user_name"
+                style="@style/log_in_edit_fields_style"
+                android:drawableStart="@drawable/ic_user"
+                android:drawableLeft="@drawable/ic_user"
+                android:drawablePadding="8dp"
+                android:hint="@string/sign_up_user_name_hint"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/sign_up_client_email"
+                style="@style/log_in_edit_fields_style"
+                android:drawableStart="@drawable/ic_email"
+                android:drawableLeft="@drawable/ic_email"
+                android:drawablePadding="8dp"
+                android:hint="@string/sign_up_user_email"
+                android:inputType="textEmailAddress" />
+
+            <Spinner
+                android:id="@+id/sign_up_client_city"
+                style="@style/log_in_edit_fields_style"
+                android:dropDownSelector="@android:color/holo_purple"
+                android:entries="@array/cities_names_en"
+                android:inputType="textEmailAddress"
+                android:padding="8dp"
+                android:spinnerMode="dropdown" />
+
+            <TextView
+                android:id="@+id/sign_up_client_location"
+                style="@style/log_in_edit_fields_style"
+                android:drawableStart="@drawable/ic_location"
+                android:drawableLeft="@drawable/ic_location"
+                android:drawablePadding="8dp"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:paddingTop="5dp"
+                android:ellipsize="marquee"
+                android:paddingBottom="5dp"
+                android:gravity="center_vertical"
+                android:hint="@string/sign_up_user_location" />
+
+            <EditText
+                android:id="@+id/sign_up_client_phone"
+                style="@style/log_in_edit_fields_style"
+                android:drawableStart="@drawable/ic_phone"
+                android:drawableLeft="@drawable/ic_phone"
+                android:drawablePadding="8dp"
+                android:hint="@string/sign_up_user_phone"
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/sign_up_client_password"
+                style="@style/log_in_edit_fields_style"
+                android:drawableStart="@drawable/ic_lock"
+                android:drawableLeft="@drawable/ic_lock"
+                android:drawablePadding="8dp"
+                android:hint="@string/sign_up_user_password"
+                android:inputType="textPassword" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/new_user_sign_up_btn"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/login_button_rounded_corners"
+            android:text="@string/new_user_sign_up"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:onClick="onConfirmSignUpClick"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sign_in_edit_fields"
+            app:layout_constraintVertical_bias="0.52" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
